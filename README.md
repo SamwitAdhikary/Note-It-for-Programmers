@@ -53,5 +53,5 @@ flutter run
 ### Created and maintained by 
 [Samwit Adhikary](https://github.com/SamwitAdhikary) [(Facebook)](https://www.facebook.com/samwit.adhikary) [(Instagram)](https://www.instagram.com/samwit_adhikary/)
 
-If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of ☕
+If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of ☕<br>
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/samwit)
