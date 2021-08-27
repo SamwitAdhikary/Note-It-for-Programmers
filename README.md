@@ -14,6 +14,7 @@ Here you will find two friends: the first is the book (as they say, books are ou
 - Basic knowledge of Flutter/Dart
 
 ### Show some ❤️ and star the repo to support the project
+- Get it on PlayStore [Note it - for Programmers](https://play.google.com/store/apps/details?id=com.samwit.note_it)
 ## Screenshots
 
 | | | |
