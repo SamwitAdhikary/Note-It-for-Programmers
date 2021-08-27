@@ -13,6 +13,7 @@ Here you will find two friends: the first is the book (as they say, books are ou
 - Android Studio or Visual Studio Code
 - Basic knowledge of Flutter/Dart
 <br>
+
 ### Show some ❤️ and star the repo to support the project
 <br>
 
