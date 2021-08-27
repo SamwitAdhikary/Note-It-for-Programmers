@@ -54,4 +54,4 @@ flutter run
 [Samwit Adhikary](https://github.com/SamwitAdhikary) [(Facebook)](https://www.facebook.com/samwit.adhikary) [(Instagram)](https://www.instagram.com/samwit_adhikary/)
 
 If you found this project helpful or you learned something from the source code and want to thank me, consider buying me a cup of ☕
-<a href="https://www.buymeacoffee.com/samwit" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" ></a>
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/samwit)
