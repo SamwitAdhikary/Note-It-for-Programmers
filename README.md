@@ -12,20 +12,14 @@ Here you will find two friends: the first is the book (as they say, books are ou
 - Flutter
 - Android Studio or Visual Studio Code
 - Basic knowledge of Flutter/Dart
-<br>
 
 ### Show some ❤️ and star the repo to support the project
-<br>
-
 ## Screenshots
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |![App Screenshot](https://play-lh.googleusercontent.com/F-GivSp33HPvFNtSvNBhOn9tZczygoekiz8ZRgfcDgfFLso4vK2qGjYatV6OcKkBPQ=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/Lu01LsFsk6J3Nz62jAroufGXuwnXmtWy27WMpthm3uXC4JG5EMXvNMXoB1jonyouDm8=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/WK8qc1ILRVwNH8h4Ddgu2hTxoBsm1kTuPNkAE71D1W5phgfAueHSam4SU61HaPyxJ6U=w1536-h722-rw)|
 |![App Screenshot](https://play-lh.googleusercontent.com/pE_t3hBGKJ5mg8JBO2xA15tqs7VWlkzkeG8CfmunFEatQHV-OzUiCKgvG4V_jq5XeHyM=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/USDjd6F3qV-aXZTmiDfNDEQGLYsdzYhmEL5fIylGFZvQ924WWS_juPAMsv7EtyLfxUA=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/DzQ5EMkGIBEUzUj7mJoRYQnc1Q2-v_8xbeqo3tFkKx0CU3O515ASsTx7BmUJFHgQj_7N=w1536-h722-rw)|
-
-<br>
-
 ## Features
 
 - Absolutely Free
