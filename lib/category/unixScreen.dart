@@ -47,6 +47,7 @@ class _UnixScreenState extends State<UnixScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => OpenBook(
+                                  myAlgo['id'],
                                   myAlgo['name'],
                                   myAlgo['author'],
                                   myAlgo['tagline'],
@@ -58,18 +59,21 @@ class _UnixScreenState extends State<UnixScreen> {
                   child: Container(
                     child: Row(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.23,
-                          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: CachedNetworkImageProvider(
-                                  myAlgo['image'],
+                        Hero(
+                          tag: myAlgo['id'],
+                          child: Container(
+                            height: MediaQuery.of(context).size.height,
+                            width: MediaQuery.of(context).size.width * 0.23,
+                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(
+                                    myAlgo['image'],
+                                  ),
+                                  fit: BoxFit.fill,
                                 ),
-                                fit: BoxFit.fill,
-                              ),
-                              borderRadius: BorderRadius.circular(5)),
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,

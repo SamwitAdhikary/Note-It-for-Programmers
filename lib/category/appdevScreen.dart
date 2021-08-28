@@ -48,6 +48,7 @@ class _AppDevScreenState extends State<AppDevScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  myAppDev['id'],
                                   myAppDev['name'],
                                   myAppDev['author'],
                                   myAppDev['tagline'],
@@ -58,16 +59,19 @@ class _AppDevScreenState extends State<AppDevScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        myAppDev['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: myAppDev['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          myAppDev['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

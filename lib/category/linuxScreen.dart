@@ -12,7 +12,7 @@ class LinuxScreen extends StatefulWidget {
   _LinuxScreenState createState() => _LinuxScreenState();
 }
 
-class _LinuxScreenState extends State<LinuxScreen> {
+class _LinuxScreenState extends State<LinuxScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/linux.json';
   List data;
 
@@ -48,6 +48,7 @@ class _LinuxScreenState extends State<LinuxScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  myLinux['id'],
                                   myLinux['name'],
                                   myLinux['author'],
                                   myLinux['tagline'],
@@ -58,16 +59,19 @@ class _LinuxScreenState extends State<LinuxScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        myLinux['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: myLinux['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          myLinux['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

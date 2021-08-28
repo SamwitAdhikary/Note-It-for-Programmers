@@ -12,7 +12,7 @@ class JavaScriptScreen extends StatefulWidget {
   _JavaScriptScreenState createState() => _JavaScriptScreenState();
 }
 
-class _JavaScriptScreenState extends State<JavaScriptScreen> {
+class _JavaScriptScreenState extends State<JavaScriptScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/javascript.json';
   List data;
 
@@ -48,6 +48,7 @@ class _JavaScriptScreenState extends State<JavaScriptScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  myJavascript['id'],
                                   myJavascript['name'],
                                   myJavascript['author'],
                                   myJavascript['tagline'],
@@ -58,16 +59,19 @@ class _JavaScriptScreenState extends State<JavaScriptScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        myJavascript['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: myJavascript['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          myJavascript['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

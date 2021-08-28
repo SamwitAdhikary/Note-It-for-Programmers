@@ -27,6 +27,7 @@ class _DownloadsState extends State<Downloads> {
     print(directory);
     setState(() {
       file = io.Directory(directory).listSync();
+      // print(file);
     });
   }
 

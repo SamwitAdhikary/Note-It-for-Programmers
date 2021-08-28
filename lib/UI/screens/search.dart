@@ -88,6 +88,7 @@ class _SearchState extends State<Search> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => OpenBook(
+                                        mybook['id'],
                                         mybook['name'],
                                         mybook['author'],
                                         mybook['tagline'],
@@ -98,17 +99,20 @@ class _SearchState extends State<Search> {
                           child: Container(
                             child: Row(
                               children: [
-                                Container(
-                                  height: MediaQuery.of(context).size.height,
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.25,
-                                  margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                                  decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                          image: CachedNetworkImageProvider(
-                                              mybook['image']),
-                                          fit: BoxFit.fill),
-                                      borderRadius: BorderRadius.circular(5)),
+                                Hero(
+                                  tag: mybook['id'],
+                                  child: Container(
+                                    height: MediaQuery.of(context).size.height,
+                                    width:
+                                        MediaQuery.of(context).size.width * 0.25,
+                                    margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                                    decoration: BoxDecoration(
+                                        image: DecorationImage(
+                                            image: CachedNetworkImageProvider(
+                                                mybook['image']),
+                                            fit: BoxFit.fill),
+                                        borderRadius: BorderRadius.circular(5)),
+                                  ),
                                 ),
                                 Column(
                                   mainAxisAlignment: MainAxisAlignment.center,

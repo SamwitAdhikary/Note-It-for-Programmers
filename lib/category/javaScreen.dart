@@ -11,7 +11,7 @@ class JavaScreen extends StatefulWidget {
   _JavaScreenState createState() => _JavaScreenState();
 }
 
-class _JavaScreenState extends State<JavaScreen> {
+class _JavaScreenState extends State<JavaScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/java.json';
   List data;
 
@@ -47,6 +47,7 @@ class _JavaScreenState extends State<JavaScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  myJava['id'],
                                   myJava['name'],
                                   myJava['author'],
                                   myJava['tagline'],
@@ -57,16 +58,19 @@ class _JavaScreenState extends State<JavaScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        myJava['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: myJava['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          myJava['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

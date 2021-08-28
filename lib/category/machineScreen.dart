@@ -12,7 +12,7 @@ class MachineLearningScreen extends StatefulWidget {
   _MachineLearningScreenState createState() => _MachineLearningScreenState();
 }
 
-class _MachineLearningScreenState extends State<MachineLearningScreen> {
+class _MachineLearningScreenState extends State<MachineLearningScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/machine.json';
   List data;
 
@@ -48,6 +48,7 @@ class _MachineLearningScreenState extends State<MachineLearningScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  myMachine['id'],
                                   myMachine['name'],
                                   myMachine['author'],
                                   myMachine['tagline'],
@@ -58,16 +59,19 @@ class _MachineLearningScreenState extends State<MachineLearningScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        myMachine['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: myMachine['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          myMachine['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

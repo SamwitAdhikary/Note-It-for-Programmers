@@ -91,7 +91,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 // color: Colors.blue,
                 height: MediaQuery.of(context).size.height * 0.1,
                 child: Center(
-                  child: Text('Version 1.1.4'),
+                  child: Text('Version 1.1.5'),
                 ),
               )
             ],

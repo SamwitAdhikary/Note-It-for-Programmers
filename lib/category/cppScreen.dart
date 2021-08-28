@@ -12,7 +12,7 @@ class CppScreen extends StatefulWidget {
   _CppScreenState createState() => _CppScreenState();
 }
 
-class _CppScreenState extends State<CppScreen> {
+class _CppScreenState extends State<CppScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/cpp.json';
   List data;
 
@@ -48,6 +48,7 @@ class _CppScreenState extends State<CppScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) => OpenBook(
+                                  mycpp['id'],
                                   mycpp['name'],
                                   mycpp['author'],
                                   mycpp['tagline'],
@@ -58,16 +59,19 @@ class _CppScreenState extends State<CppScreen> {
                     child: Container(
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width * 0.23,
-                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: CachedNetworkImageProvider(
-                                        mycpp['image']),
-                                    fit: BoxFit.fill),
-                                borderRadius: BorderRadius.circular(5)),
+                          Hero(
+                            tag: mycpp['id'],
+                            child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              width: MediaQuery.of(context).size.width * 0.23,
+                              margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                              decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                      image: CachedNetworkImageProvider(
+                                          mycpp['image']),
+                                      fit: BoxFit.fill),
+                                  borderRadius: BorderRadius.circular(5)),
+                            ),
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,

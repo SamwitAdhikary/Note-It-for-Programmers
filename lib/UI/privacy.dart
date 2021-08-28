@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:note_it/config/palette.dart';
+import 'package:url_launcher/url_launcher.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
 class Privacy extends StatefulWidget {
@@ -137,14 +138,14 @@ class _PrivacyState extends State<Privacy> {
     </body>
     </html>
             """,
-            // onLinkTap: (url) async {
-            //   if (await canLaunch(url)) {
-            //     await launch(url);
-            //   } else {
-            //     throw 'Could not launch $url';
-            //   }
-            // },
-            // onLinkTap: 
+            onLinkTap: (url, _, __, ___) async {
+              if (await canLaunch(url)) {
+                await launch(url);
+              } else {
+                throw 'Could not launch $url';
+              }
+            },
+            // onLinkTap:
           ),
         ),
       ),

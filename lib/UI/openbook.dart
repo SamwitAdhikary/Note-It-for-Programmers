@@ -4,35 +4,36 @@ import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:note_it/UI/viewpdf.dart';
 import 'package:note_it/config/palette.dart';
-// import 'package:note_it/model/book.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class OpenBook extends StatefulWidget {
+  final int id;
   final String name;
   final String author;
   final String tagline;
   final String url;
   final String image;
   final String desc;
-  OpenBook(
-      this.name, this.author, this.tagline, this.url, this.image, this.desc);
+  OpenBook(this.id, this.name, this.author, this.tagline, this.url, this.image,
+      this.desc);
 
   @override
   _OpenBookState createState() =>
-      _OpenBookState(name, author, tagline, url, image, desc);
+      _OpenBookState(id, name, author, tagline, url, image, desc);
 }
 
 class _OpenBookState extends State<OpenBook> {
+  final int id;
   final String name;
   final String author;
   final String tagline;
   final String url;
   final String image;
   final String desc;
-  _OpenBookState(
-      this.name, this.author, this.tagline, this.url, this.image, this.desc);
+  _OpenBookState(this.id, this.name, this.author, this.tagline, this.url,
+      this.image, this.desc);
 
   bool downloading = false;
   var progressString = "";
@@ -75,12 +76,15 @@ class _OpenBookState extends State<OpenBook> {
               color: Palette.darkblue),
         ),
         actions: [
-          IconButton(
-            icon: Icon(MdiIcons.download),
-            onPressed: () {
-              downloadFile();
-            },
-          )
+          downloading == false
+              ? IconButton(
+                  icon: Icon(MdiIcons.download),
+                  onPressed: () {
+                    downloadFile();
+                  },
+                  
+                )
+              : Offstage()
         ],
         backgroundColor: Palette.scaffold,
         elevation: 0,
@@ -101,14 +105,17 @@ class _OpenBookState extends State<OpenBook> {
         Center(
           child: Column(
             children: [
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 45, 0, 0),
-                height: 340,
-                width: 250,
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: CachedNetworkImageProvider(image),
-                        fit: BoxFit.fill)),
+              Hero(
+                tag: id,
+                child: Container(
+                  margin: EdgeInsets.fromLTRB(0, 45, 0, 0),
+                  height: 340,
+                  width: 250,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: CachedNetworkImageProvider(image),
+                          fit: BoxFit.fill)),
+                ),
               ),
               SizedBox(
                 height: 15,

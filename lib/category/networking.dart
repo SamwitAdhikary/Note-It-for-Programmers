@@ -11,7 +11,7 @@ class NetworkingScreen extends StatefulWidget {
   _NetworkingScreenState createState() => _NetworkingScreenState();
 }
 
-class _NetworkingScreenState extends State<NetworkingScreen> {
+class _NetworkingScreenState extends State<NetworkingScreen>{
   final String url = "https://samwitadhikary.github.io/jsons/networking.json";
   List data;
 
@@ -46,6 +46,7 @@ class _NetworkingScreenState extends State<NetworkingScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => OpenBook(
+                                  myAlgo['id'],
                                   myAlgo['name'],
                                   myAlgo['author'],
                                   myAlgo['tagline'],
@@ -57,18 +58,21 @@ class _NetworkingScreenState extends State<NetworkingScreen> {
                   child: Container(
                     child: Row(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.23,
-                          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: CachedNetworkImageProvider(
-                                  myAlgo['image'],
+                        Hero(
+                          tag: myAlgo['id'],
+                          child: Container(
+                            height: MediaQuery.of(context).size.height,
+                            width: MediaQuery.of(context).size.width * 0.23,
+                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(
+                                    myAlgo['image'],
+                                  ),
+                                  fit: BoxFit.fill,
                                 ),
-                                fit: BoxFit.fill,
-                              ),
-                              borderRadius: BorderRadius.circular(5)),
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,

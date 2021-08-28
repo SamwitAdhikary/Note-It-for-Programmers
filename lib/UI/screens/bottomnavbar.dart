@@ -49,32 +49,33 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        bottomNavigationBar: CurvedNavigationBar(
-          index: pageIndex,
-          height: 55.0,
-          items: <Widget>[
-            Icon(Icons.home, size: 30),
-            Icon(Icons.search, size: 30),
-            Icon(
-              Icons.download_sharp,
-              size: 30,
-            ),
-            Icon(Icons.info_outline, size: 30),
-          ],
-          color: Colors.white,
-          buttonBackgroundColor: Colors.white,
-          backgroundColor: Palette.scaffold,
-          animationCurve: Curves.easeInOut,
-          animationDuration: Duration(milliseconds: 300),
-          onTap: (int tapped) {
-            setState(() {
-              _showPage = _pageChooser(tapped);
-            });
-          },          
-          // letIndexChange: (index) => true,
-        ),
-        body: Container(
-          child: _showPage,
-        ));
+      bottomNavigationBar: CurvedNavigationBar(
+        index: pageIndex,
+        height: 55.0,
+        items: <Widget>[
+          Icon(Icons.home, size: 30),
+          Icon(Icons.search, size: 30),
+          Icon(
+            Icons.download_sharp,
+            size: 30,
+          ),
+          Icon(Icons.info_outline, size: 30),
+        ],
+        color: Colors.white,
+        buttonBackgroundColor: Colors.white,
+        backgroundColor: Palette.scaffold,
+        animationCurve: Curves.easeInOut,
+        animationDuration: Duration(milliseconds: 300),
+        onTap: (int tapped) {
+          setState(() {
+            _showPage = _pageChooser(tapped);
+          });
+        },
+        // letIndexChange: (index) => true,
+      ),
+      body: Container(
+        child: _showPage,
+      ),
+    );
   }
 }

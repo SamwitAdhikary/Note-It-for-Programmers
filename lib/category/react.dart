@@ -12,7 +12,7 @@ class ReactScreen extends StatefulWidget {
   _ReactScreenState createState() => _ReactScreenState();
 }
 
-class _ReactScreenState extends State<ReactScreen> {
+class _ReactScreenState extends State<ReactScreen>{
   final String url = "https://samwitadhikary.github.io/jsons/react.json";
   List data;
 
@@ -47,6 +47,7 @@ class _ReactScreenState extends State<ReactScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => OpenBook(
+                                  myAlgo['id'],
                                   myAlgo['name'],
                                   myAlgo['author'],
                                   myAlgo['tagline'],
@@ -58,18 +59,21 @@ class _ReactScreenState extends State<ReactScreen> {
                   child: Container(
                     child: Row(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.23,
-                          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: CachedNetworkImageProvider(
-                                  myAlgo['image'],
+                        Hero(
+                          tag: myAlgo['id'],
+                          child: Container(
+                            height: MediaQuery.of(context).size.height,
+                            width: MediaQuery.of(context).size.width * 0.23,
+                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: CachedNetworkImageProvider(
+                                    myAlgo['image'],
+                                  ),
+                                  fit: BoxFit.fill,
                                 ),
-                                fit: BoxFit.fill,
-                              ),
-                              borderRadius: BorderRadius.circular(5)),
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,

@@ -12,7 +12,7 @@ class PythonScreen extends StatefulWidget {
   _PythonScreenState createState() => _PythonScreenState();
 }
 
-class _PythonScreenState extends State<PythonScreen> {
+class _PythonScreenState extends State<PythonScreen>{
   final String url = 'https://samwitadhikary.github.io/jsons/python.json';
   List data;
 
@@ -47,6 +47,7 @@ class _PythonScreenState extends State<PythonScreen> {
                         context,
                         MaterialPageRoute(
                             builder: (context) => OpenBook(
+                                py['id'],
                                 py['name'],
                                 py['author'],
                                 py['tagline'],
@@ -57,16 +58,19 @@ class _PythonScreenState extends State<PythonScreen> {
                   child: Container(
                     child: Row(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height,
-                          width: MediaQuery.of(context).size.width * 0.23,
-                          margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                          decoration: BoxDecoration(
-                              image: DecorationImage(
-                                  image:
-                                      CachedNetworkImageProvider(py['image']),
-                                  fit: BoxFit.fill),
-                              borderRadius: BorderRadius.circular(5)),
+                        Hero(
+                          tag: py['id'],
+                          child: Container(
+                            height: MediaQuery.of(context).size.height,
+                            width: MediaQuery.of(context).size.width * 0.23,
+                            margin: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image:
+                                        CachedNetworkImageProvider(py['image']),
+                                    fit: BoxFit.fill),
+                                borderRadius: BorderRadius.circular(5)),
+                          ),
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
