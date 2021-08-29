@@ -16,7 +16,7 @@ Here you will find two friends: the first is the book (as they say, books are ou
 ### Show some ❤️ and star the repo to support the project
 <!-- [![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/download.png)](https://play.google.com/store/apps/details?id=com.samwit.note_it) -->
 
-<a href="https://play.google.com/store/apps/details?id=com.samwit.note_it"><img src="/images/download.png" width="50px"></a>
+<a href="https://play.google.com/store/apps/details?id=com.samwit.note_it"><img src="/images/download.png" width="200px"></a>
 ## Screenshots
 
 | | | |
