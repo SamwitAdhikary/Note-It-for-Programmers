@@ -19,8 +19,8 @@ Here you will find two friends: the first is the book (as they say, books are ou
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|![App Screenshot](https://play-lh.googleusercontent.com/F-GivSp33HPvFNtSvNBhOn9tZczygoekiz8ZRgfcDgfFLso4vK2qGjYatV6OcKkBPQ=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/Lu01LsFsk6J3Nz62jAroufGXuwnXmtWy27WMpthm3uXC4JG5EMXvNMXoB1jonyouDm8=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/WK8qc1ILRVwNH8h4Ddgu2hTxoBsm1kTuPNkAE71D1W5phgfAueHSam4SU61HaPyxJ6U=w1536-h722-rw)|
-|![App Screenshot](https://play-lh.googleusercontent.com/pE_t3hBGKJ5mg8JBO2xA15tqs7VWlkzkeG8CfmunFEatQHV-OzUiCKgvG4V_jq5XeHyM=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/USDjd6F3qV-aXZTmiDfNDEQGLYsdzYhmEL5fIylGFZvQ924WWS_juPAMsv7EtyLfxUA=w1536-h722-rw)|![App Screenshot](https://play-lh.googleusercontent.com/DzQ5EMkGIBEUzUj7mJoRYQnc1Q2-v_8xbeqo3tFkKx0CU3O515ASsTx7BmUJFHgQj_7N=w1536-h722-rw)|
+|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/1.jpg)|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/2.jpg)|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/3.jpg)|
+|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/4.jpg)|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/5.jpg)|![App Screenshot](https://github.com/SamwitAdhikary/Note-It-for-Programmers/blob/master/images/6.jpg)|
 ## Features
 
 - Absolutely Free
